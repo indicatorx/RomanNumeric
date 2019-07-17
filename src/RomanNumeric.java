@@ -15,6 +15,7 @@ public class RomanNumeric {
         else if (i == 2) return "II";
         else if(i == 3) return "III";
         else if(i == 4) return "IV";
-        return "V";
+        else if(i == 5) return "V";
+        return "VI";
     }
 }

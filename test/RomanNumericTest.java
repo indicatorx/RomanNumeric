@@ -52,4 +52,10 @@ public class RomanNumericTest {
         assertEquals("V", actual);
     }
     
+    @Test
+    public void ReturnVIWhenItIs6(){
+        String actual = count.convert(6);
+        assertEquals("VI", actual);
+    }
+    
 }
