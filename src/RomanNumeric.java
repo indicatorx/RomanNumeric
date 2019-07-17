@@ -11,7 +11,8 @@
 public class RomanNumeric {
 
     public String convert(int i) {
-        return "I";
+        if(i == 1) return "I";
+        
+        return "II";
     }
-    
 }

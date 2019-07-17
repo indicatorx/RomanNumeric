@@ -28,25 +28,10 @@ public class RomanNumericTest {
         assertEquals("I", actual);
     }
     
-    @BeforeClass
-    public static void setUpClass() {
+    @Test
+    public void ReturnIIWhenItIs2(){
+        String actual = count.convert(2);
+        assertEquals("II", actual);
     }
     
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
 }
