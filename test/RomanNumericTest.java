@@ -46,4 +46,10 @@ public class RomanNumericTest {
         assertEquals("IV", actual);
     }
     
+    @Test
+    public void ReturnVWhenItIs5(){
+        String actual = count.convert(5);
+        assertEquals("V", actual);
+    }
+    
 }
