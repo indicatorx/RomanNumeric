@@ -18,6 +18,8 @@ public class RomanNumeric {
         else if(i == 5) return "V";
         else if(i == 6) return "VI";
         else if(i == 7) return "VII";
-        return "VIII";
+        else if(i == 8) return "VIII";
+        else if(i == 9) return "IX";
+        return "X";
     }
 }

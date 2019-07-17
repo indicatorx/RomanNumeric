@@ -70,4 +70,16 @@ public class RomanNumericTest {
         assertEquals("VIII", actual);
     }
     
+    @Test
+    public void ReturnIXWhenItIs9(){
+        String actual = count.convert(9);
+        assertEquals("IX", actual);
+    }
+    
+    @Test
+    public void ReturnXWhenItIs10(){
+        String actual = count.convert(10);
+        assertEquals("X", actual);
+    }
+    
 }
