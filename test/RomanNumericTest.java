@@ -34,4 +34,10 @@ public class RomanNumericTest {
         assertEquals("II", actual);
     }
     
+    @Test
+    public void ReturnIIIWhenItIs3(){
+        String actual = count.convert(3);
+        assertEquals("III", actual);
+    }
+    
 }

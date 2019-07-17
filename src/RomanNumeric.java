@@ -12,7 +12,7 @@ public class RomanNumeric {
 
     public String convert(int i) {
         if(i == 1) return "I";
-        
-        return "II";
+        else if (i == 2) return "II";
+        return "III";
     }
 }
