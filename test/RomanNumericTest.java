@@ -40,4 +40,10 @@ public class RomanNumericTest {
         assertEquals("III", actual);
     }
     
+    @Test
+    public void ReturnIVWhenItIs4(){
+        String actual = count.convert(4);
+        assertEquals("IV", actual);
+    }
+    
 }
