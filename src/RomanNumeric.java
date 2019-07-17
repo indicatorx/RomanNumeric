@@ -9,5 +9,9 @@
  * @author Panudej Pamornsiritragul
  */
 public class RomanNumeric {
+
+    public String convert(int i) {
+        return "I";
+    }
     
 }

@@ -19,12 +19,13 @@ public class RomanNumericTest {
     
     RomanNumeric count;
     public RomanNumericTest() {
-        RomanNumeric count = new RomanNumeric();
+        count = new RomanNumeric();
     }
     
     @Test
     public void ReturnIWhenItIs1(){
-        
+        String actual = count.convert(1);
+        assertEquals("I", actual);
     }
     
     @BeforeClass
