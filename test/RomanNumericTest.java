@@ -58,4 +58,16 @@ public class RomanNumericTest {
         assertEquals("VI", actual);
     }
     
+    @Test
+    public void ReturnVIIWhenItIs7(){
+        String actual = count.convert(7);
+        assertEquals("VII", actual);
+    }
+    
+    @Test
+    public void ReturnVIIIWhenItIs8(){
+        String actual = count.convert(8);
+        assertEquals("VIII", actual);
+    }
+    
 }
