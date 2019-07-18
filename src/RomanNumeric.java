@@ -1,4 +1,5 @@
 
+import java.time.Clock;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,9 +33,17 @@ public class RomanNumeric {
     
     public String convert(int i) {
         String roman = "";
-        if(i%5 == 0){
-            roman += "V";
+        for(int index = list.length - 1; index >= 0 ; index--){
+            if(i < list[index]) {
+                continue;
+            }
+            else {
+                int n = (int)(i/list[index]);
+                //roman += list[index]
+            }
+            
         }
+        
         if(i == 1) return "I";
         else if (i == 2) return "II";
         else if(i == 3) return "III";
