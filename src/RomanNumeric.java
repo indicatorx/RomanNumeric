@@ -33,27 +33,34 @@ public class RomanNumeric {
     
     public String convert(int i) {
         String roman = "";
+        int left = i;
         for(int index = list.length - 1; index >= 0 ; index--){
-            if(i < list[index]) {
+            if(left < list[index]) {
                 continue;
             }
             else {
-                int n = (int)(i/list[index]);
+                int n = (int)(left/list[index]);
+                System.out.println("n = " + n);
+                left = left%list[index];
+                for (int j = 0; j < n; j++) {
+                    roman += map.get(list[index]);
+                }
                 //roman += list[index]
             }
             
         }
-        
-        if(i == 1) return "I";
-        else if (i == 2) return "II";
-        else if(i == 3) return "III";
-        else if(i == 4) return "IV";
-        else if(i == 5) return "V";
-        else if(i == 6) return "VI";
-        else if(i == 7) return "VII";
-        else if(i == 8) return "VIII";
-        else if(i == 9) return "IX";
-        else if(i == 10) return "X";
-        return "XI";
+        System.out.println(i + ": " + roman);
+        return roman;
+//        if(i == 1) return "I";
+//        else if (i == 2) return "II";
+//        else if(i == 3) return "III";
+//        else if(i == 4) return "IV";
+//        else if(i == 5) return "V";
+//        else if(i == 6) return "VI";
+//        else if(i == 7) return "VII";
+//        else if(i == 8) return "VIII";
+//        else if(i == 9) return "IX";
+//        else if(i == 10) return "X";
+//        return "XI";
     }
 }
