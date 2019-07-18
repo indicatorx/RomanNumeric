@@ -87,5 +87,17 @@ public class RomanNumericTest {
         String actual = count.convert(11);
         assertEquals("XI", actual);
     }
+
+    @Test
+    public void ReturnLXVWhenItIs65(){
+        String actual = count.convert(65);
+        assertEquals("LXV", actual);
+    }
+
+    @Test
+    public void ReturnLXIXWhenItIs69(){
+        String actual = count.convert(69);
+        assertEquals("LXIX", actual);
+    }
     
 }

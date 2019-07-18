@@ -35,16 +35,21 @@ public class RomanNumeric {
         String roman = "";
         int left = i;
         for(int index = list.length - 1; index >= 0 ; index--){
-            if(left < list[index]) {
-                continue;
-            }
-            else {
+            if(left >= list[index]) {
                 int n = (int)(left/list[index]);
-                System.out.println("n = " + n);
-                left = left%list[index];
-                for (int j = 0; j < n; j++) {
-                    roman += map.get(list[index]);
+                System.out.println(index + ": n = " + n);
+
+                if(left == 4 || left == 9) {
+
                 }
+                else {
+                    for (int j = 0; j < n; j++) {
+                        roman += map.get(list[index]);
+                    }
+                }
+                left = left%list[index];
+                System.out.println(index + ": left = " + left);
+                System.out.println(index + ": roman = " + roman);
                 //roman += list[index]
             }
             
