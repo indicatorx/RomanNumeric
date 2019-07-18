@@ -82,4 +82,10 @@ public class RomanNumericTest {
         assertEquals("X", actual);
     }
     
+    @Test
+    public void ReturnXIWhenItIs11(){
+        String actual = count.convert(11);
+        assertEquals("XI", actual);
+    }
+    
 }

@@ -1,3 +1,7 @@
+
+import java.util.HashMap;
+import java.util.Map;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,8 +13,28 @@
  * @author Panudej Pamornsiritragul
  */
 public class RomanNumeric {
+    
+    Map<Integer, String> map;
+    int[] list = {1, 5, 10, 50, 100, 500, 1000};
 
+    public RomanNumeric() {
+        map = new HashMap<Integer, String>();
+        map.put(1, "I");
+        map.put(5, "V");
+        map.put(10, "X");
+        map.put(50, "L");
+        map.put(100, "C");
+        map.put(500, "D");
+        map.put(1000, "M");
+        
+    }
+    
+    
     public String convert(int i) {
+        String roman = "";
+        if(i%5 == 0){
+            roman += "V";
+        }
         if(i == 1) return "I";
         else if (i == 2) return "II";
         else if(i == 3) return "III";
@@ -20,6 +44,7 @@ public class RomanNumeric {
         else if(i == 7) return "VII";
         else if(i == 8) return "VIII";
         else if(i == 9) return "IX";
-        return "X";
+        else if(i == 10) return "X";
+        return "XI";
     }
 }
