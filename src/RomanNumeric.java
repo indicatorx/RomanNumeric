@@ -1,6 +1,5 @@
 
-import java.time.Clock;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /*
@@ -16,42 +15,38 @@ import java.util.Map;
 public class RomanNumeric {
     
     Map<Integer, String> map;
-    int[] list = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
+//    int[] list = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
 
     public RomanNumeric() {
-        map = new HashMap<Integer, String>();
-        map.put(1, "I");
-        map.put(4, "IV");
-        map.put(5, "V");
-        map.put(9, "IX");
-        map.put(10, "X");
-        map.put(40, "XL");
-        map.put(50, "L");
-        map.put(90, "XC");
-        map.put(100, "C");
-        map.put(400, "CD");
-        map.put(500, "D");
-        map.put(900, "CM");
+        map = new LinkedHashMap<Integer, String>();
         map.put(1000, "M");
+        map.put(900, "CM");
+        map.put(500, "D");
+        map.put(400, "CD");
+        map.put(100, "C");
+        map.put(90, "XC");
+        map.put(50, "L");
+        map.put(40, "XL");
+        map.put(10, "X");
+        map.put(9, "IX");
+        map.put(5, "V");
+        map.put(4, "IV");
+        map.put(1, "I");
     }
 
     public String convert(int i) {
         String roman = "";
         int left = i;
-        for(int index = list.length - 1; index >= 0 ; index--){
-            if(left >= list[index]) {
-                int n = (int)(left/list[index]);
-                System.out.println(index + ": n = " + n);
+        int n = 0;
 
+        for(Map.Entry<Integer, String> entry : map.entrySet()) {
+            if(left >= entry.getKey()) {
+                n = left/entry.getKey();
                 for (int j = 0; j < n; j++) {
-                    roman += map.get(list[index]);
+                    roman += entry.getValue();
                 }
-                left = left%list[index];
-                System.out.println(index + ": left = " + left);
-                System.out.println(index + ": roman = " + roman);
-                //roman += list[index]
+                left = left % entry.getKey();
             }
-            
         }
         System.out.println(i + ": " + roman);
         return roman;
