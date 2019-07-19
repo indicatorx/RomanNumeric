@@ -99,5 +99,11 @@ public class RomanNumericTest {
         String actual = count.convert(69);
         assertEquals("LXIX", actual);
     }
+
+    @Test
+    public void ReturnMCMXLWhenItIs1940(){
+        String actual = count.convert(1940);
+        assertEquals("MCMXL", actual);
+    }
     
 }
